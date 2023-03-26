@@ -51,7 +51,7 @@ then
   systemctl restart apt-cacher-ng
   systemctl start apt-cacher-ng
   systemctl enable apt-cacher-ng
-  echo 'Acquire::http::Proxy "http://10.8.8.10:3142";' >> /etc/apt/apt.conf.d/00aptproxy
+  echo 'Acquire::http::Proxy "http://192.168.56.10:3142";' >> /etc/apt/apt.conf.d/00aptproxy
   echo -e 'Dpkg::Progress-Fancy "1";\nAPT::Color "1";' >> /etc/apt/apt.conf.d/99progress
 fi
 
