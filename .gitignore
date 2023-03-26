@@ -1,1 +1,4 @@
 .vagrant/
+.DS_Store
+labs/kv-k8s-cluster-ha/.kube
+labs/kv-k8s-cluster-ha/*.out
