@@ -52,7 +52,8 @@ cp -i /etc/kubernetes/admin.conf /vagrant/.kube/config
 if (( $NODE == 0 )) ; then
     case $CNI_PROVIDER in
     calico)
-        wget -q https://docs.projectcalico.org/manifests/calico.yaml -O /tmp/calico-default.yaml
+        # wget -q https://docs.projectcalico.org/manifests/calico.yaml -O /tmp/calico-default.yaml
+        wget -q https://docs.projectcalico.org/v3.19/manifests/calico.yaml -O /tmp/calico-default.yaml
         sed "s+192.168.0.0/16+$POD_CIDR+g" /tmp/calico-default.yaml > /tmp/calico-defined.yaml
         kubectl apply -f /tmp/calico-defined.yaml
         ;;
